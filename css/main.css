@@ -1,0 +1,68 @@
+body {
+  font-family: "Prompt", sans-serif;
+  background-image: url("../img/fondo.jpg");
+  color: #f5f5f5; }
+  body footer {
+    background-color: #333533; }
+  body li {
+    transition: .3s; }
+    body li a {
+      border-radius: 1rem; }
+    body li :hover {
+      background-color: #fdd100; }
+  body section h2 {
+    text-transform: uppercase; }
+
+main h1 {
+  color: #f5f5f5;
+  text-transform: uppercase; }
+
+.bg-color1 {
+  background-color: #fdd100; }
+
+.bg-color2 {
+  background-color: #333533; }
+
+.textColor {
+  color: #fdd100; }
+
+.portada {
+  transform: scale(0.7);
+  transition: .5s; }
+  .portada :active {
+    transform: scale(0.1); }
+
+.imgPortfolio {
+  transition: .3s; }
+  .imgPortfolio :hover {
+    transform: scale(0.7); }
+
+.c-imgPrincipal {
+  padding-top: 11%;
+  padding-bottom: 21%; }
+  .c-imgPrincipal .movimiento {
+    animation-name: mover;
+    /*pongo el keyframe que quiero que haga*/
+    animation-iteration-count: infinite;
+    /* para que haga un loop infinito*/
+    animation-duration: 15s;
+    /*por cuanto tiempo quiero que haga el efecto*/
+    animation-fill-mode: scale(0.8); }
+
+@keyframes mover {
+  0% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(0.6); }
+  100% {
+    transform: scale(0.8); } }
+
+@media only screen and (max-width: 990px) {
+  h1 {
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.5rem; }
+  .formContacto label {
+    display: block; } }
