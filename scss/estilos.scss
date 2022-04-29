@@ -1,24 +1,22 @@
 
 @import "utilities/variables";
 
-body{
-    font-family: $fuente;
-    background-image: $imgFondo;
-    color: $colorBlanco;
+@import "utilities/mixin";
 
+
+
+
+body{
+    font-family: $fuente;    
+    color: map-get($map: $colores, $key: colorBlanco );
+    background-image: $imgFondo;
     footer{
-        background-color: $colorGris;
+        @extend .bg-color2;
+        text-decoration: none;
     }
-    li{
-        transition: .3s; 
-        a{
-            border-radius: 1rem;
-        }       
-        :hover{
-            background-color: $colorAmarrillo;
-        }
-    }
-    
+    li{        
+        @include menuLi;                   
+    }    
     section{
         h2{
             text-transform: uppercase;
@@ -27,31 +25,42 @@ body{
 }
 
 main{
+    
     h1{
-        color: $colorBlanco;
-        text-transform: uppercase;        
+        @include titulo;               
+    }
+    h2{
+        @include textos;
+    }
+    div{
+        img{
+            :hover{
+                @include efectoImg;
+            }            
+        }
     }
 }
 
 .bg-color1{
-    background-color: $colorAmarrillo;
+    background-color: map-get($map: $colores, $key: colorAmarrillo );
 }
 
 .bg-color2{
-    background-color: $colorGris;
+    background-color: map-get($map: $colores, $key: colorGris );
 }
 .textColor{
-    color: $colorAmarrillo;
+    color: map-get($map: $colores, $key: colorAmarrillo );
+}
+.textColor2{
+    color: map-get($map: $colores, $key: colorBlanco );
+}
+.textColor3{
+    color: map-get($map: $colores, $key: colorNegro );
 }
 
-.portada{
-    transform: scale(.7);
-    transition: .5s;
-    :active{
-        transform: scale(.1);
-    }  
+.padHome{
+    padding: 5rem;
 }
-
 .imgPortfolio{
     transition: .3s;
     :hover{
@@ -60,9 +69,6 @@ main{
 }
 
 .c-imgPrincipal{
-    padding-top: 11%;
-    padding-bottom: 21%;
-
     .movimiento{
         animation-name: mover; /*pongo el keyframe que quiero que haga*/
         animation-iteration-count: infinite; /* para que haga un loop infinito*/
@@ -83,12 +89,22 @@ main{
 }
 
 
+.mainHome, .sectionHome{
+    background-image: $imgFondo2;
+    height: 100vh;
+}
 
+.flechaHome{
+    margin: 2rem;
+}
+
+//mediaqueries
 
 @media only screen and (max-width:990px){
     h1{
         font-size: 2rem;
     } 
+    
 }
 
 @media only screen and (max-width:700px){
@@ -98,5 +114,15 @@ main{
     .formContacto label{
         display: block;
     }
+    .flechaHome{
+        margin: rem;
+        width: 30px;
+        height: 30px;
+    }
+    .padHome{
+        padding: 3rem;
+    }
 }
+
+
 

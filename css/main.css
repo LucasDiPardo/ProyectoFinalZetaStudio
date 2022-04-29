@@ -1,53 +1,59 @@
 body {
   font-family: "Prompt", sans-serif;
-  background-image: url("../img/fondo.jpg");
-  color: #f5f5f5; }
+  color: #f5f5f5;
+  background-image: url("../img/fondo.jpg"); }
   body footer {
-    background-color: #333533; }
+    text-decoration: none; }
   body li {
     transition: .3s; }
-    body li a {
-      border-radius: 1rem; }
     body li :hover {
-      background-color: #fdd100; }
+      text-decoration: underline; }
   body section h2 {
     text-transform: uppercase; }
 
 main h1 {
-  color: #f5f5f5;
+  text-transform: none;
+  font-size: 2rem;
+  color: #f5f5f5; }
+
+main h2 {
   text-transform: uppercase; }
+
+main div img :hover {
+  transition: .5s;
+  transform: scale(0.7); }
 
 .bg-color1 {
   background-color: #fdd100; }
 
-.bg-color2 {
-  background-color: #333533; }
+.bg-color2, body footer {
+  background-color: #1c1c1c; }
 
 .textColor {
   color: #fdd100; }
 
-.portada {
-  transform: scale(0.7);
-  transition: .5s; }
-  .portada :active {
-    transform: scale(0.1); }
+.textColor2 {
+  color: #f5f5f5; }
+
+.textColor3 {
+  color: #252525; }
+
+.padHome {
+  padding: 5rem; }
 
 .imgPortfolio {
   transition: .3s; }
   .imgPortfolio :hover {
     transform: scale(0.7); }
 
-.c-imgPrincipal {
-  padding-top: 11%;
-  padding-bottom: 21%; }
-  .c-imgPrincipal .movimiento {
-    animation-name: mover;
-    /*pongo el keyframe que quiero que haga*/
-    animation-iteration-count: infinite;
-    /* para que haga un loop infinito*/
-    animation-duration: 15s;
-    /*por cuanto tiempo quiero que haga el efecto*/
-    animation-fill-mode: scale(0.8); }
+.c-imgPrincipal .movimiento {
+  animation-name: mover;
+  /*pongo el keyframe que quiero que haga*/
+  animation-iteration-count: infinite;
+  /* para que haga un loop infinito*/
+  animation-duration: 15s;
+  /*por cuanto tiempo quiero que haga el efecto*/
+  animation-fill-mode: scale(0.8); }
 
 @keyframes mover {
   0% {
@@ -57,6 +63,13 @@ main h1 {
   100% {
     transform: scale(0.8); } }
 
+.mainHome, .sectionHome {
+  background-image: url("../img/fondo2.jpg");
+  height: 100vh; }
+
+.flechaHome {
+  margin: 2rem; }
+
 @media only screen and (max-width: 990px) {
   h1 {
     font-size: 2rem; } }
@@ -65,4 +78,10 @@ main h1 {
   h1 {
     font-size: 1.5rem; }
   .formContacto label {
-    display: block; } }
+    display: block; }
+  .flechaHome {
+    margin: rem;
+    width: 30px;
+    height: 30px; }
+  .padHome {
+    padding: 3rem; } }

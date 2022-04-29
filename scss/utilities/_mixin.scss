@@ -1,0 +1,28 @@
+//mixing
+
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+}
+
+@mixin titulo(){    
+    text-transform: none;
+    font-size: 2rem;
+    color: map-get($map: $colores, $key: colorBlanco );    
+}
+
+@mixin menuLi(){   
+    transition: .3s; 
+    :hover{
+        text-decoration: underline;
+    }
+}
+
+@mixin textos(){
+    text-transform: uppercase;
+}
+
+@mixin efectoImg(){
+        transition: .5s;
+        transform: scale(.7);  
+}
