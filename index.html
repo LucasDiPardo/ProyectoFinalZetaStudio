@@ -23,41 +23,39 @@
 
 </head>
 <body>
-      <div class="container-fluid">
+      <div class="container-fluid" id="home">
         <header class="row">         
           <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <div class="container-fluid ">              
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                   <a class="navbar-brand" href="#">
-                    <img class="m-1 p-1" src="img/sticker.png" width="30" height="30" alt="imagen del menu hamburguesa">
+                    <img class="m-1 p-1" src="img/menu.png" width="30" height="30" alt="imagen del menu hamburguesa">
                   </a> 
                 </span>
               </button>      
 
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
+                  <li class="nav-item ">
+                    <a class=" nav-link text-white m-3" href="#home">HOME</a>
+                  </li>
 
-                    <li class="nav-item ">
-                      <a class=" nav-link text-white m-3" href="#">HOME</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white m-3" href="pages/portfolio.html">PORTFOLIO</a>
+                  </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link text-white m-3" href="pages/portfolio.html">PORTFOLIO</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white m-3" href="pages/nosotros.html">NOSOTROS</a>
+                  </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link text-white m-3" href="pages/nosotros.html">NOSOTROS</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white m-3" href="pages/novedades.html">NOVEDADES</a>
+                  </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link text-white m-3" href="pages/novedades.html">NOVEDADES</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link text-white m-3" href="pages/contacto.html">CONTACTO</a>
-                    </li>
-
+                  <li class="nav-item">
+                    <a class="nav-link text-white m-3" href="pages/contacto.html">CONTACTO</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -69,20 +67,26 @@
         </section>      
         
         <main class="row">
+          <div class="col-12">
+            <h1 class="text-center">
+              Home | ZetaStudio
+            </h1>
+          </div>
           <div class="col-12 d-flex align-items-center justify-content-center">
             <a href="#idCarrousel">
               <img class="flechaHome" src="img/flecha.png" width="50" height="50" alt="logo youtube">
             </a>
           </div>
 
-          <div class="col-12 ">
-            <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+          <div>
+            <div class="col-12">
+              <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-
+            
                 <div class="carousel-inner padHome">
                   <div class="carousel-item active" id="idCarrousel">
                     <img src="img/carrousel/1.jpg" class="img-fluid padHome " alt="imagen carrousel 1">                    
@@ -94,9 +98,7 @@
                     <img src="img/carrousel/3.jpg" class="img-fluid padHome " alt="imagen carrousel 3">                    
                   </div>
                 </div>
-
-
-
+            
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -106,14 +108,72 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-        </div>  
+            </div>
+          </div>
 
           <div class="col-12 d-flex align-items-center justify-content-center">
             <a  href="#masInfo">
               <img class="flechaHome" src="img/flecha.png" width="50" height="50" alt="logo youtube">
             </a>
           </div>
+          <!-- boton flotante-->
+          <a href="#home" class="flotante">
+            <p>
+              ⇧              
+            </p>
+          </a>
+        </main>
+        <main class="row">
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <a href="#idCarrousel">
+              <img class="flechaHome" src="img/flecha.png" width="50" height="50" alt="logo youtube">
+            </a>
+          </div>
 
+          <div>
+            <div class="col-12">
+              <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            
+                <div class="carousel-inner padHome">
+                  <div class="carousel-item active" id="idCarrousel">
+                    <img src="img/carrousel/1.jpg" class="img-fluid padHome " alt="imagen carrousel 1">                    
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="img/carrousel/2.jpg" class="img-fluid padHome " alt="imagen carrousel 2">                    
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="img/carrousel/3.jpg" class="img-fluid padHome " alt="imagen carrousel 3">                    
+                  </div>
+                </div>
+            
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <a  href="#masInfo">
+              <img class="flechaHome" src="img/flecha.png" width="50" height="50" alt="logo youtube">
+            </a>
+          </div>
+          <!-- boton flotante-->
+          <a href="#home" class="flotante">
+            <p>
+              ⇧              
+            </p>
+          </a>
         </main>
 
         <section class="row d-flex align-items-center sectionHome" id="masInfo">
@@ -121,17 +181,16 @@
             MAS INFO
           </h2>
           <div class="col-lg-6 col-md-12 d-flex align-items-center">
-            <p class="text-center text-black">
+            <p class="h3 p-3 text-center text-black">
                 En esta web vas a encontrar diseños de imágenes digitales, ya sea historias de instagram, miniaturas, logos, overlays de stream, etc.
             </p>
           </div>
           <div class="col-lg-6 col-md-12">
-              <img class="img-fluid" src="img/logoAmarillo.png" alt="imagen section">
+              <img class="img-fluid p-3" src="img/logoAmarillo.png" alt="imagen section">
           </div>
         </section>
       
         <footer class="row">
-
           <div class="col-12 d-flex justify-content-center mt-3">
             <a href="https://instagram.com/zetastudio__?utm_medium=copy_link" target="_blank">
               <img src="img/redes/Insta.png" width="50" height="50" alt="logo instagram">                      
@@ -146,12 +205,12 @@
                   Todos los derechos Reservados - Zeta Studio
                 </p>
                 <p>
-                  Desarrollado por 
+                  © Desarrollado por 
                   <a class="textoFooter" href="https://instagram.com/LucasDiPardo" target="_blank">
-                    @LucasDiPardo 
+                  @LucasDiPardo 
                   </a>
                 </p> 
-          </div>            
+          </div>           
         </footer>
       </div>
     

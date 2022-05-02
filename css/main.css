@@ -17,7 +17,7 @@ main h1 {
   color: #f5f5f5; }
 
 main h2 {
-  text-transform: uppercase; }
+  text-transform: none; }
 
 main div img :hover {
   transition: .5s;
@@ -42,9 +42,7 @@ main div img :hover {
   padding: 5rem; }
 
 .imgPortfolio {
-  transition: .3s; }
-  .imgPortfolio :hover {
-    transform: scale(0.7); }
+  padding: 2rem; }
 
 .c-imgPrincipal .movimiento {
   animation-name: mover;
@@ -70,13 +68,106 @@ main div img :hover {
 .flechaHome {
   margin: 2rem; }
 
-@media only screen and (max-width: 990px) {
-  h1 {
-    font-size: 2rem; } }
+.flotante {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #fdd100;
+  color: #252525;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none; }
+  .flotante :hover {
+    transition: .3s;
+    transform: scale(1.4); }
+
+.padreGrid {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: "tituloNosotros tituloNosotros" "imgNosotros1 txtNosotros1" "txtNosotros2 imgNosotros2" "footerNosotros footerNosotros";
+  margin-bottom: 2rem; }
+
+.tituloNosotros {
+  grid-area: tituloNosotros;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 3rem; }
+
+.imgNosotros1 {
+  grid-area: imgNosotros1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; }
+
+.imgNosotros2 {
+  grid-area: imgNosotros2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; }
+
+.txtNosotros1 {
+  grid-area: txtNosotros1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; }
+  .txtNosotros1 p {
+    text-align: center;
+    font-size: 2rem; }
+
+.txtNosotros2 {
+  grid-area: txtNosotros2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; }
+  .txtNosotros2 p {
+    text-align: center;
+    font-size: 2rem; }
+
+.footerNosotros {
+  grid-area: footerNosotros;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .footerNosotros p {
+    text-align: center;
+    padding: .2rem; }
+  .footerNosotros img {
+    margin: .5rem; }
+  .footerNosotros a {
+    text-decoration: none; }
+
+.medidasImgNosotros {
+  max-width: 400px;
+  max-height: 400px; }
+
+@media only screen and (max-width: 1000px) {
+  .padreGrid {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "tituloNosotros" "imgNosotros1" "txtNosotros1" "imgNosotros2" "txtNosotros2" "footerNosotros";
+    margin-bottom: 2rem; }
+  .tituloNosotros {
+    font-size: 2rem; }
+  .txtNosotros1 p, .txtNosotros2 p {
+    font-size: 1rem; }
+  .medidasImgNosotros {
+    max-width: 300px;
+    max-height: 300px; } }
 
 @media only screen and (max-width: 700px) {
-  h1 {
-    font-size: 1.5rem; }
+  .tituloNosotros {
+    font-size: 1.8rem; }
+  .txtNosotros1 p, .txtNosotros2 p {
+    font-size: 1rem; }
   .formContacto label {
     display: block; }
   .flechaHome {
@@ -84,4 +175,9 @@ main div img :hover {
     width: 30px;
     height: 30px; }
   .padHome {
-    padding: 3rem; } }
+    padding: 3rem; }
+  .medidasImgNosotros {
+    max-width: 200px;
+    max-height: 200px; }
+  .flotante {
+    display: none; } }

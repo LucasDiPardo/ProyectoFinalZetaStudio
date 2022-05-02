@@ -24,8 +24,7 @@ body{
     }
 }
 
-main{
-    
+main{    
     h1{
         @include titulo;               
     }
@@ -62,10 +61,7 @@ main{
     padding: 5rem;
 }
 .imgPortfolio{
-    transition: .3s;
-    :hover{
-        transform: scale(.7);
-    }
+    padding: 2rem;
 }
 
 .c-imgPrincipal{
@@ -98,19 +94,138 @@ main{
     margin: 2rem;
 }
 
+.flotante {
+    position:fixed;
+    width:50px;
+    height:50px;
+    bottom:40px;
+    right:40px;
+    background-color:map-get($map: $colores, $key: colorAmarrillo );
+    color: map-get($map: $colores, $key: colorNegro);
+    border-radius:40px;
+    text-align:center;
+    font-size:30px;
+    text-decoration: none;    
+    :hover{
+        transition: .3s;
+        transform: scale(1.4);
+    }
+}
+
+//nosotros con grid
+.padreGrid{
+    display: grid;
+    height: 100vh;
+    grid-template-areas:    "tituloNosotros tituloNosotros"
+                            "imgNosotros1 txtNosotros1"
+                            "txtNosotros2 imgNosotros2"
+                            "footerNosotros footerNosotros";
+
+    margin-bottom:2rem;
+}
+.tituloNosotros{
+    grid-area: tituloNosotros;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: map-get($map: $tamanio, $key: grande);
+}
+.imgNosotros1{
+    grid-area: imgNosotros1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.imgNosotros2{
+    grid-area: imgNosotros2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.txtNosotros1{
+    grid-area: txtNosotros1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    p{
+        text-align: center;
+        font-size:map-get($map: $tamanio, $key: mediano);
+    }
+}
+.txtNosotros2{
+    grid-area: txtNosotros2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    p{
+        text-align: center;
+        font-size:map-get($map: $tamanio, $key: mediano);
+    }
+}
+.footerNosotros{
+    grid-area: footerNosotros;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        text-align: center;
+        padding: .2rem;    }
+    img{
+        margin: .5rem;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.medidasImgNosotros{
+    max-width: 400px;
+    max-height: 400px;
+}
+
 //mediaqueries
 
-@media only screen and (max-width:990px){
-    h1{
+@media only screen and (max-width:1000px){
+    .padreGrid{
+        display: grid;
+        height: 100vh;
+        grid-template-areas:    "tituloNosotros"
+                                "imgNosotros1"
+                                "txtNosotros1"
+                                "imgNosotros2"
+                                "txtNosotros2"
+                                "footerNosotros";
+    
+        margin-bottom:2rem;
+    }
+    .tituloNosotros{
         font-size: 2rem;
-    } 
+    }
+    .txtNosotros1,.txtNosotros2{
+        p{
+            font-size: map-get($map: $tamanio, $key: chico);
+        }
+    }
+    .medidasImgNosotros{
+        max-width: 300px;
+        max-height: 300px;
+    }
     
 }
 
 @media only screen and (max-width:700px){
-    h1{
-        font-size: 1.5rem;
-    } 
+    .tituloNosotros{
+        font-size: 1.8rem;
+    }
+    .txtNosotros1,.txtNosotros2{
+        p{
+            font-size: 1rem;
+        }        
+    }
     .formContacto label{
         display: block;
     }
@@ -121,6 +236,13 @@ main{
     }
     .padHome{
         padding: 3rem;
+    }
+    .medidasImgNosotros{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .flotante{
+        display: none;
     }
 }
 
