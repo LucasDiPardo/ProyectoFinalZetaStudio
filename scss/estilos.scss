@@ -5,7 +5,6 @@
 
 
 
-
 body{
     font-family: $fuente;    
     color: map-get($map: $colores, $key: colorBlanco );
@@ -61,28 +60,15 @@ main{
     padding: 5rem;
 }
 .imgPortfolio{
-    padding: 2rem;
+    padding: 2rem;    
 }
 
-.c-imgPrincipal{
-    .movimiento{
-        animation-name: mover; /*pongo el keyframe que quiero que haga*/
-        animation-iteration-count: infinite; /* para que haga un loop infinito*/
-        animation-duration: 15s; /*por cuanto tiempo quiero que haga el efecto*/
-        animation-fill-mode: scale(.8);
-    }
-    @keyframes mover{
-        0%{
-            transform: scale(.8)
-        }
-        50%{
-            transform: scale(.6)        
-        }
-        100%{
-            transform: scale(.8)
-        }
-    }
+.loader{
+    position: fixed;
+    width: 100vw;
+    height :100vh;
 }
+
 
 
 .mainHome, .sectionHome{
@@ -98,8 +84,8 @@ main{
     position:fixed;
     width:50px;
     height:50px;
-    bottom:40px;
-    right:40px;
+    bottom:30px;
+    right:30px;
     background-color:map-get($map: $colores, $key: colorAmarrillo );
     color: map-get($map: $colores, $key: colorNegro);
     border-radius:40px;
@@ -108,7 +94,7 @@ main{
     text-decoration: none;    
     :hover{
         transition: .3s;
-        transform: scale(1.4);
+        transform: scale(.7);
     }
 }
 
@@ -189,7 +175,7 @@ main{
 
 //mediaqueries
 
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:1024px){
     .padreGrid{
         display: grid;
         height: 100vh;
@@ -215,9 +201,10 @@ main{
         max-height: 300px;
     }
     
+    
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:600px){
     .tituloNosotros{
         font-size: 1.8rem;
     }
@@ -234,15 +221,17 @@ main{
         width: 30px;
         height: 30px;
     }
-    .padHome{
-        padding: 3rem;
-    }
     .medidasImgNosotros{
         max-width: 200px;
         max-height: 200px;
     }
-    .flotante{
-        display: none;
+    .flotante {
+        position:fixed;
+        width:30px;
+        height:30px;       
+    }
+    .padHome{
+        padding: 2rem;
     }
 }
 
