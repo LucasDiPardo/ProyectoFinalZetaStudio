@@ -30,13 +30,6 @@ main{
     h2{
         @include textos;
     }
-    div{
-        img{
-            :hover{
-                @include efectoImg;
-            }            
-        }
-    }
 }
 
 .bg-color1{

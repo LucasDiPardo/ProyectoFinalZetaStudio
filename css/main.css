@@ -19,10 +19,6 @@ main h1 {
 main h2 {
   text-transform: none; }
 
-main div img :hover {
-  transition: .5s;
-  transform: scale(0.7); }
-
 .bg-color1 {
   background-color: #fdd100; }
 
